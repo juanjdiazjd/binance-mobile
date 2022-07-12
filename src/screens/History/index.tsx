@@ -21,7 +21,7 @@ import CustomActivityIndicator from '../../components/CustomActivityIndicator';
 import transactionsApi from '../../api';
 import {useCallback} from 'react';
 import useSWR from 'swr';
-import {useFocusEffect} from '@react-navigation/core';
+
 const {transactionServices: transactionAPI} = transactionsApi;
 
 const Logo = styled(Image)`
@@ -46,11 +46,6 @@ const HistoryScreen = ({
     mutate: mutateGet,
   } = useSWR('get', transactionAPI.getTransactions);
 
-  useFocusEffect(
-    useCallback(() => {
-      mutateGet();
-    }, [mutateGet]),
-  );
   const onRefresh = useCallback(() => {
     mutateGet();
   }, [mutateGet]);
