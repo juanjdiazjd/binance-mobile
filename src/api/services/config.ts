@@ -1,6 +1,6 @@
 import Config from 'react-native-config';
 
-const WEATHER_API_PREFIX = 'v1';
+const TRANSACTIONS_API_PREFIX = 'transactions';
 
 const TIMEOUTS = {
   FAST: 3e3,
@@ -10,7 +10,7 @@ const TIMEOUTS = {
 };
 
 const config = {
-  baseURL: Config.WEATHER_API_URL,
+  baseURL: Config.URL_API_TRANSACTIONS,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -20,15 +20,15 @@ const config = {
 
 export {TIMEOUTS};
 const METHODS = {
-  weather: {
-    current: 'POST',
+  transactions: {
+    create: 'POST',
   },
 };
 
 const URLS = {
-  weather: {
-    current: `${WEATHER_API_PREFIX}/current`,
-    forecast: `${WEATHER_API_PREFIX}/forecast`,
+  transactions: {
+    get: `${TRANSACTIONS_API_PREFIX}/get`,
+    create: `${TRANSACTIONS_API_PREFIX}/create`,
   },
 };
 

@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BVLinearGradient.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>CocoaAsyncSocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -79,27 +74,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Permission-LocationAccuracy.xcscheme</key>
+		<key>Pods-RipioMobile-RipioMobileTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Permission-LocationAlways.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Permission-LocationWhenInUse.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WeatherApp-WeatherAppTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-WeatherApp.xcscheme</key>
+		<key>Pods-RipioMobile.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -119,27 +99,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RNCAsyncStorage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RNCMaskedView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>RNDeviceInfo.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RNGestureHandler.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RNPermissions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -149,7 +109,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RNVectorIcons.xcscheme</key>
+		<key>React-Codegen.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -214,6 +174,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>React-bridging.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>React-callinvoker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -269,6 +234,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SocketRocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Yoga.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -300,11 +270,6 @@
 			<false/>
 		</dict>
 		<key>react-native-config.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>react-native-geolocation-service.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

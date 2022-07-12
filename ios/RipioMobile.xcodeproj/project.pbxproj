@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RipioMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RipioMobileTests.m */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-RipioMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RipioMobile.a */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		4251148A80E50D5379D5A2F0 /* libPods-RipioMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E9AD1BE2CA8E3FE701D069 /* libPods-RipioMobile.a */; };
+		7699B88040F8A987B510C191 /* libPods-RipioMobile-RipioMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RipioMobile-RipioMobileTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F81331E69CDB5A6AF90BBC88 /* libPods-RipioMobile-RipioMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E902BC8D61E5EBF03A3FD43 /* libPods-RipioMobile-RipioMobileTests.a */; };
+		AB54AF9E287CB9F200C92DDA /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF8E287CB9F200C92DDA /* Fontisto.ttf */; };
+		AB54AF9F287CB9F200C92DDA /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF8F287CB9F200C92DDA /* Octicons.ttf */; };
+		AB54AFA0287CB9F200C92DDA /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF90287CB9F200C92DDA /* Feather.ttf */; };
+		AB54AFA1287CB9F200C92DDA /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF91287CB9F200C92DDA /* Entypo.ttf */; };
+		AB54AFA2287CB9F200C92DDA /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF92287CB9F200C92DDA /* FontAwesome5_Brands.ttf */; };
+		AB54AFA3287CB9F200C92DDA /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF93287CB9F200C92DDA /* MaterialCommunityIcons.ttf */; };
+		AB54AFA4287CB9F200C92DDA /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF94287CB9F200C92DDA /* AntDesign.ttf */; };
+		AB54AFA5287CB9F200C92DDA /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF95287CB9F200C92DDA /* Foundation.ttf */; };
+		AB54AFA6287CB9F200C92DDA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF96287CB9F200C92DDA /* Ionicons.ttf */; };
+		AB54AFA7287CB9F200C92DDA /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF97287CB9F200C92DDA /* FontAwesome5_Solid.ttf */; };
+		AB54AFA8287CB9F200C92DDA /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF98287CB9F200C92DDA /* FontAwesome5_Regular.ttf */; };
+		AB54AFA9287CB9F200C92DDA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF99287CB9F200C92DDA /* FontAwesome.ttf */; };
+		AB54AFAA287CB9F200C92DDA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF9A287CB9F200C92DDA /* Zocial.ttf */; };
+		AB54AFAB287CB9F200C92DDA /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF9B287CB9F200C92DDA /* EvilIcons.ttf */; };
+		AB54AFAC287CB9F200C92DDA /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF9C287CB9F200C92DDA /* SimpleLineIcons.ttf */; };
+		AB54AFAD287CB9F200C92DDA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB54AF9D287CB9F200C92DDA /* MaterialIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,51 +46,35 @@
 		00E356EE1AD99517003FC87E /* RipioMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RipioMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RipioMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RipioMobileTests.m; sourceTree = "<group>"; };
-		0BA06EE83E1258AB45C60464 /* Pods-RipioMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile.debug.xcconfig"; path = "Target Support Files/Pods-RipioMobile/Pods-RipioMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RipioMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RipioMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RipioMobile/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RipioMobile/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = RipioMobile/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RipioMobile/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RipioMobile/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RipioMobile/main.m; sourceTree = "<group>"; };
-		27C923EC46FF0B2D8B8A63DE /* Pods-RipioMobile-RipioMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile-RipioMobileTests.release.xcconfig"; path = "Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		3A003F7C5EF2E373ADC525F4 /* Pods-RipioMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile.release.xcconfig"; path = "Target Support Files/Pods-RipioMobile/Pods-RipioMobile.release.xcconfig"; sourceTree = "<group>"; };
-		4E902BC8D61E5EBF03A3FD43 /* libPods-RipioMobile-RipioMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RipioMobile-RipioMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		662B1A31480405DC88E41805 /* Pods-RipioMobile-RipioMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile-RipioMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-RipioMobile-RipioMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RipioMobile-RipioMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4392A12AC88292D35C810B /* Pods-RipioMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile.debug.xcconfig"; path = "Target Support Files/Pods-RipioMobile/Pods-RipioMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-RipioMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile.release.xcconfig"; path = "Target Support Files/Pods-RipioMobile/Pods-RipioMobile.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-RipioMobile-RipioMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile-RipioMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-RipioMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RipioMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RipioMobile/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AB67C81127AB753F00A00DBF /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
-		AB67C81227AB753F00A00DBF /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
-		AB67C81327AB753F00A00DBF /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
-		AB67C81427AB753F00A00DBF /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		AB67C81527AB753F00A00DBF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
-		AB67C81627AB753F00A00DBF /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
-		AB67C81727AB753F00A00DBF /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
-		AB67C81827AB753F00A00DBF /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		AB67C81927AB753F00A00DBF /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		AB67C81A27AB753F00A00DBF /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
-		AB67C81B27AB753F00A00DBF /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
-		AB67C81C27AB753F00A00DBF /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		AB67C81D27AB753F00A00DBF /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
-		AB67C81E27AB753F00A00DBF /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
-		AB67C81F27AB753F00A00DBF /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
-		AB67C82027AB753F00A00DBF /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		AB67C85727AB772C00A00DBF /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
-		AB67C85827AB772C00A00DBF /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
-		AB67C85927AB772C00A00DBF /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
-		AB67C85A27AB772C00A00DBF /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		AB67C85B27AB772C00A00DBF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
-		AB67C85C27AB772C00A00DBF /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
-		AB67C85D27AB772C00A00DBF /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
-		AB67C85E27AB772C00A00DBF /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		AB67C85F27AB772C00A00DBF /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		AB67C86027AB772C00A00DBF /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
-		AB67C86127AB772C00A00DBF /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
-		AB67C86227AB772C00A00DBF /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		AB67C86327AB772C00A00DBF /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
-		AB67C86427AB772C00A00DBF /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
-		AB67C86527AB772C00A00DBF /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
-		AB67C86627AB772C00A00DBF /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		D0E9AD1BE2CA8E3FE701D069 /* libPods-RipioMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RipioMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-RipioMobile-RipioMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RipioMobile-RipioMobileTests.release.xcconfig"; path = "Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB54AF8E287CB9F200C92DDA /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		AB54AF8F287CB9F200C92DDA /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		AB54AF90287CB9F200C92DDA /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		AB54AF91287CB9F200C92DDA /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		AB54AF92287CB9F200C92DDA /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		AB54AF93287CB9F200C92DDA /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		AB54AF94287CB9F200C92DDA /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		AB54AF95287CB9F200C92DDA /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		AB54AF96287CB9F200C92DDA /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		AB54AF97287CB9F200C92DDA /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		AB54AF98287CB9F200C92DDA /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		AB54AF99287CB9F200C92DDA /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		AB54AF9A287CB9F200C92DDA /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		AB54AF9B287CB9F200C92DDA /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		AB54AF9C287CB9F200C92DDA /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		AB54AF9D287CB9F200C92DDA /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81331E69CDB5A6AF90BBC88 /* libPods-RipioMobile-RipioMobileTests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-RipioMobile-RipioMobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4251148A80E50D5379D5A2F0 /* libPods-RipioMobile.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-RipioMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,23 +115,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		02BD6BE15ACA695DBED5BE24 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0BA06EE83E1258AB45C60464 /* Pods-RipioMobile.debug.xcconfig */,
-				3A003F7C5EF2E373ADC525F4 /* Pods-RipioMobile.release.xcconfig */,
-				662B1A31480405DC88E41805 /* Pods-RipioMobile-RipioMobileTests.debug.xcconfig */,
-				27C923EC46FF0B2D8B8A63DE /* Pods-RipioMobile-RipioMobileTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* RipioMobile */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				AB67C85627AB772C00A00DBF /* Fonts */,
-				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
@@ -144,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				D0E9AD1BE2CA8E3FE701D069 /* libPods-RipioMobile.a */,
-				4E902BC8D61E5EBF03A3FD43 /* libPods-RipioMobile-RipioMobileTests.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-RipioMobile.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-RipioMobile-RipioMobileTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,7 +141,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				AB67C81027AB753F00A00DBF /* Fonts */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -161,12 +148,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				AB54AF8D287CB9F200C92DDA /* Fonts */,
 				13B07FAE1A68108700A75B9A /* RipioMobile */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RipioMobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				02BD6BE15ACA695DBED5BE24 /* Pods */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -182,51 +170,39 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB67C81027AB753F00A00DBF /* Fonts */ = {
+		AB54AF8D287CB9F200C92DDA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				AB67C81127AB753F00A00DBF /* Fontisto.ttf */,
-				AB67C81227AB753F00A00DBF /* Octicons.ttf */,
-				AB67C81327AB753F00A00DBF /* Feather.ttf */,
-				AB67C81427AB753F00A00DBF /* Entypo.ttf */,
-				AB67C81527AB753F00A00DBF /* FontAwesome5_Brands.ttf */,
-				AB67C81627AB753F00A00DBF /* MaterialCommunityIcons.ttf */,
-				AB67C81727AB753F00A00DBF /* AntDesign.ttf */,
-				AB67C81827AB753F00A00DBF /* Foundation.ttf */,
-				AB67C81927AB753F00A00DBF /* Ionicons.ttf */,
-				AB67C81A27AB753F00A00DBF /* FontAwesome5_Solid.ttf */,
-				AB67C81B27AB753F00A00DBF /* FontAwesome5_Regular.ttf */,
-				AB67C81C27AB753F00A00DBF /* FontAwesome.ttf */,
-				AB67C81D27AB753F00A00DBF /* Zocial.ttf */,
-				AB67C81E27AB753F00A00DBF /* EvilIcons.ttf */,
-				AB67C81F27AB753F00A00DBF /* SimpleLineIcons.ttf */,
-				AB67C82027AB753F00A00DBF /* MaterialIcons.ttf */,
+				AB54AF8E287CB9F200C92DDA /* Fontisto.ttf */,
+				AB54AF8F287CB9F200C92DDA /* Octicons.ttf */,
+				AB54AF90287CB9F200C92DDA /* Feather.ttf */,
+				AB54AF91287CB9F200C92DDA /* Entypo.ttf */,
+				AB54AF92287CB9F200C92DDA /* FontAwesome5_Brands.ttf */,
+				AB54AF93287CB9F200C92DDA /* MaterialCommunityIcons.ttf */,
+				AB54AF94287CB9F200C92DDA /* AntDesign.ttf */,
+				AB54AF95287CB9F200C92DDA /* Foundation.ttf */,
+				AB54AF96287CB9F200C92DDA /* Ionicons.ttf */,
+				AB54AF97287CB9F200C92DDA /* FontAwesome5_Solid.ttf */,
+				AB54AF98287CB9F200C92DDA /* FontAwesome5_Regular.ttf */,
+				AB54AF99287CB9F200C92DDA /* FontAwesome.ttf */,
+				AB54AF9A287CB9F200C92DDA /* Zocial.ttf */,
+				AB54AF9B287CB9F200C92DDA /* EvilIcons.ttf */,
+				AB54AF9C287CB9F200C92DDA /* SimpleLineIcons.ttf */,
+				AB54AF9D287CB9F200C92DDA /* MaterialIcons.ttf */,
 			);
 			name = Fonts;
-			path = "../../zuvap-mobile/zuvap/node_modules/react-native-vector-icons/Fonts";
+			path = "../node_modules/react-native-vector-icons/Fonts";
 			sourceTree = "<group>";
 		};
-		AB67C85627AB772C00A00DBF /* Fonts */ = {
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AB67C85727AB772C00A00DBF /* Fontisto.ttf */,
-				AB67C85827AB772C00A00DBF /* Octicons.ttf */,
-				AB67C85927AB772C00A00DBF /* Feather.ttf */,
-				AB67C85A27AB772C00A00DBF /* Entypo.ttf */,
-				AB67C85B27AB772C00A00DBF /* FontAwesome5_Brands.ttf */,
-				AB67C85C27AB772C00A00DBF /* MaterialCommunityIcons.ttf */,
-				AB67C85D27AB772C00A00DBF /* AntDesign.ttf */,
-				AB67C85E27AB772C00A00DBF /* Foundation.ttf */,
-				AB67C85F27AB772C00A00DBF /* Ionicons.ttf */,
-				AB67C86027AB772C00A00DBF /* FontAwesome5_Solid.ttf */,
-				AB67C86127AB772C00A00DBF /* FontAwesome5_Regular.ttf */,
-				AB67C86227AB772C00A00DBF /* FontAwesome.ttf */,
-				AB67C86327AB772C00A00DBF /* Zocial.ttf */,
-				AB67C86427AB772C00A00DBF /* EvilIcons.ttf */,
-				AB67C86527AB772C00A00DBF /* SimpleLineIcons.ttf */,
-				AB67C86627AB772C00A00DBF /* MaterialIcons.ttf */,
+				3B4392A12AC88292D35C810B /* Pods-RipioMobile.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-RipioMobile.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-RipioMobile-RipioMobileTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-RipioMobile-RipioMobileTests.release.xcconfig */,
 			);
-			path = Fonts;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,12 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RipioMobileTests" */;
 			buildPhases = (
-				026814967B5E987CA09B199A /* [CP] Check Pods Manifest.lock */,
+				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				D33A9ACC5D4DCB79851998F0 /* [CP] Embed Pods Frameworks */,
-				2412833EDCC2D526DA5371A1 /* [CP] Copy Pods Resources */,
+				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
+				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,14 +233,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RipioMobile" */;
 			buildPhases = (
-				71733CBA85EF41C46762BEC5 /* [CP] Check Pods Manifest.lock */,
+				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				A41C443AD9DF5B26E683E833 /* [CP] Embed Pods Frameworks */,
-				098CB98BA500654BB3A6F5E8 /* [CP] Copy Pods Resources */,
+				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,7 +299,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB54AF9E287CB9F200C92DDA /* Fontisto.ttf in Resources */,
+				AB54AFA9287CB9F200C92DDA /* FontAwesome.ttf in Resources */,
+				AB54AFA5287CB9F200C92DDA /* Foundation.ttf in Resources */,
+				AB54AFA8287CB9F200C92DDA /* FontAwesome5_Regular.ttf in Resources */,
+				AB54AFA6287CB9F200C92DDA /* Ionicons.ttf in Resources */,
+				AB54AFAB287CB9F200C92DDA /* EvilIcons.ttf in Resources */,
+				AB54AFA1287CB9F200C92DDA /* Entypo.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				AB54AFAA287CB9F200C92DDA /* Zocial.ttf in Resources */,
+				AB54AFAC287CB9F200C92DDA /* SimpleLineIcons.ttf in Resources */,
+				AB54AFA0287CB9F200C92DDA /* Feather.ttf in Resources */,
+				AB54AF9F287CB9F200C92DDA /* Octicons.ttf in Resources */,
+				AB54AFA2287CB9F200C92DDA /* FontAwesome5_Brands.ttf in Resources */,
+				AB54AFA4287CB9F200C92DDA /* AntDesign.ttf in Resources */,
+				AB54AFAD287CB9F200C92DDA /* MaterialIcons.ttf in Resources */,
+				AB54AFA7287CB9F200C92DDA /* FontAwesome5_Solid.ttf in Resources */,
+				AB54AFA3287CB9F200C92DDA /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,15 +329,34 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
 			);
 			name = "Bundle React Native code and images";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		026814967B5E987CA09B199A /* [CP] Check Pods Manifest.lock */ = {
+		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,41 +378,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		098CB98BA500654BB3A6F5E8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2412833EDCC2D526DA5371A1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71733CBA85EF41C46762BEC5 /* [CP] Check Pods Manifest.lock */ = {
+		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,24 +400,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A41C443AD9DF5B26E683E833 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D33A9ACC5D4DCB79851998F0 /* [CP] Embed Pods Frameworks */ = {
+		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -455,6 +415,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile/Pods-RipioMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RipioMobile-RipioMobileTests/Pods-RipioMobile-RipioMobileTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -491,7 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +503,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 662B1A31480405DC88E41805 /* Pods-RipioMobile-RipioMobileTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-RipioMobile-RipioMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -517,7 +511,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = RipioMobileTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,12 +530,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27C923EC46FF0B2D8B8A63DE /* Pods-RipioMobile-RipioMobileTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-RipioMobile-RipioMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RipioMobileTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -560,12 +554,11 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BA06EE83E1258AB45C60464 /* Pods-RipioMobile.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-RipioMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55SA4D6687;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RipioMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,12 +580,11 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A003F7C5EF2E373ADC525F4 /* Pods-RipioMobile.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-RipioMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55SA4D6687;
 				INFOPLIST_FILE = RipioMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,7 +607,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -659,7 +651,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -671,6 +663,13 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -680,7 +679,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -717,7 +716,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -728,6 +727,13 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

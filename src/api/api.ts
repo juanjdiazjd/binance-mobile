@@ -1,13 +1,9 @@
-import { create, TIMEOUT_ERROR } from 'apisauce';
-
-
+import {create, TIMEOUT_ERROR} from 'apisauce';
 import apiConfig from './services/config';
 
-
-
-const requestTimeout = (promise:any, axiosConfig:any, reqConfig:any) => {
-  const { timeout } = apiConfig;
-  const config = { ...axiosConfig, ...(reqConfig || {}) };
+const requestTimeout = (promise: any, axiosConfig: any, reqConfig: any) => {
+  const {timeout} = apiConfig;
+  const config = {...axiosConfig, ...(reqConfig || {})};
   const duration = (parseInt(config.timeout, 10) || timeout) + 1e3;
   const result = {
     ok: false,
@@ -17,10 +13,10 @@ const requestTimeout = (promise:any, axiosConfig:any, reqConfig:any) => {
     status: null,
     headers: null,
     config,
-    duration
+    duration,
   };
   const timeoutPromise = new Promise(resolve =>
-    setTimeout(resolve, duration, result)
+    setTimeout(resolve, duration, result),
   );
 
   return Promise.race([timeoutPromise, promise]);
@@ -30,13 +26,10 @@ const buildApi = (config = apiConfig) => {
   const api = create({
     ...apiConfig,
     ...config,
-    headers: { ...apiConfig.headers, ...config.headers },
-    //httpsAgent:{ ...apiConfig.httpsAgent }
-    
-    
+    headers: {...apiConfig.headers, ...config.headers},
   });
   const {
-    axiosInstance: { defaults },
+    axiosInstance: {defaults},
     get,
     delete: del,
     head,
@@ -44,15 +37,9 @@ const buildApi = (config = apiConfig) => {
     put,
     patch,
     link,
-    unlink
+    unlink,
   } = api;
 
-  api.addAsyncRequestTransform(request => async () => {
-    {
-   
-    }
-  });
-  
   api.get = (...args) => get(...args);
   api.delete = (...args) => requestTimeout(del(...args), defaults, args[2]);
   api.head = (...args) => requestTimeout(head(...args), defaults, args[2]);

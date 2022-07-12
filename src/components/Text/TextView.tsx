@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {ThemeContext} from 'styled-components';
+import styled from 'styled-components';
 import {Text, TextProps} from 'react-native';
 import theme from '../../theme';
 import {Spacing} from '../../types/sizes';
@@ -24,11 +24,11 @@ export enum TextType {
   medium = 'medium',
   small = 'small',
   bigBold = 'bigBold',
-  bigBoldMonserrat = 'bigBoldMonserrat',
+  bigBoldLato = 'bigBoldLato',
   mediumBold = 'mediumBold',
-  mediumBoldMonserrat = 'mediumBoldMonserrat',
+  mediumBoldLato = 'mediumBoldLato',
   smallBold = 'smallBold',
-  smallBoldMonserrat = 'smallBoldMonserrat',
+  smallBoldLato = 'smallBoldLato',
   verySmallBold = 'verySmallBold',
   mediumColorPrimary = 'mediumColorPrimary',
   smallWhite = 'smallWhite',
@@ -46,6 +46,7 @@ export type StyledTextValue = {
   lineHeight: string;
   color: string;
   variant: string;
+  fontWeight: string;
 };
 
 export const textValues: StyledTextValue[] = [
@@ -55,6 +56,7 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '19px',
     type: TextType.small,
     variant: theme.fonts.robotoLight,
+    fontWeight: 'normal',
   },
   {
     color: theme.colors.white,
@@ -62,6 +64,7 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '19px',
     type: TextType.smallWhite,
     variant: theme.fonts.robotoLight,
+    fontWeight: 'normal',
   },
   {
     color: theme.colors.primary,
@@ -69,6 +72,7 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '25px',
     type: TextType.mediumColorPrimary,
     variant: theme.fonts.robotoLight,
+    fontWeight: 'normal',
   },
   {
     color: theme.colors.white,
@@ -76,20 +80,15 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '25px',
     type: TextType.medium,
     variant: theme.fonts.robotoLight,
+    fontWeight: 'normal',
   },
   {
-    color: theme.colors.darkGray,
+    color: theme.colors.titleText,
     fontSize: '18px',
     lineHeight: '22px',
-    type: TextType.mediumBoldMonserrat,
-    variant: theme.fonts.montserratSemiBold,
-  },
-  {
-    color: theme.colors.white,
-    fontSize: '18px',
-    lineHeight: '28px',
-    type: TextType.bigBoldMonserrat,
-    variant: theme.fonts.montserratSemiBold,
+    type: TextType.mediumBoldLato,
+    variant: theme.fonts.latoSemiBold,
+    fontWeight: 'normal',
   },
   {
     color: theme.colors.white,
@@ -97,6 +96,7 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '28px',
     type: TextType.big,
     variant: theme.fonts.robotoLight,
+    fontWeight: 'normal',
   },
   {
     color: theme.colors.primary,
@@ -104,13 +104,15 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '19px',
     type: TextType.smallBold,
     variant: theme.fonts.robotoBold,
+    fontWeight: 'bold',
   },
   {
     color: theme.colors.primary,
     fontSize: '16px',
     lineHeight: '19px',
-    type: TextType.smallBoldMonserrat,
-    variant: theme.fonts.montserratSemiBold,
+    type: TextType.smallBoldLato,
+    variant: theme.fonts.latoSemiBold,
+    fontWeight: 'bold',
   },
   {
     color: theme.colors.primary,
@@ -118,6 +120,7 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '19px',
     type: TextType.verySmallBold,
     variant: theme.fonts.robotoBold,
+    fontWeight: 'bold',
   },
   {
     color: theme.colors.primary,
@@ -125,13 +128,23 @@ export const textValues: StyledTextValue[] = [
     lineHeight: '25px',
     type: TextType.mediumBold,
     variant: theme.fonts.robotoBold,
+    fontWeight: 'bold',
   },
   {
-    color: theme.colors.white,
+    color: theme.colors.titleText,
+    fontSize: '23px',
+    lineHeight: '25px',
+    type: TextType.bigBoldLato,
+    variant: theme.fonts.latoBold,
+    fontWeight: 'bold',
+  },
+  {
+    color: theme.colors.titleText,
     fontSize: '23px',
     lineHeight: '25px',
     type: TextType.bigBold,
-    variant: theme.fonts.robotoBold,
+    variant: theme.fonts.latoBold,
+    fontWeight: 'bold',
   },
 ];
 ('./types');
@@ -147,12 +160,14 @@ const StyledTextView = styled(Text)<{
   mode: string;
   colorText: string;
   margin?: Spacing;
+  fontWeight?: string;
 }>`
   color: ${({mode, colorText}) =>
-    mode === TextMode.darkGray ? colors.darkGray : colorText};
+    mode === TextMode.darkGray ? colors.titleText : colorText};
   width: ${theme.sizes.fullWidth};
   font-size: ${({values}) => values?.fontSize};
   letter-spacing: 0;
+  font-weight: ${({values}) => values?.fontWeight};
   line-height: ${({values}) => values?.lineHeight};
   margin: ${({margin}) => getCSSMarginInPx(margin)};
   text-align: ${({textAlign}) => textAlign || 'left'};

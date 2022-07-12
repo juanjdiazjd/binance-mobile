@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, ViewProps } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {View, ViewProps} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import styled from 'styled-components';
 
-
-import { HAS_NOTCH } from '../../config/constants';
 import theme from '../../theme';
-import { MarginSize } from '../../types/sizes';
+import {MarginSize} from '../../types/sizes';
+import DeviceInfo from 'react-native-device-info';
+
+const HAS_NOTCH = DeviceInfo.hasNotch();
 
 interface ContentViewProps extends ViewProps {
   fullWidth?: boolean;
@@ -14,28 +15,29 @@ interface ContentViewProps extends ViewProps {
   horizontalAlign?: 'flex-start' | 'center' | 'flex-end';
 }
 
-const ContentViewWithNotch = styled(SafeAreaView) <ContentViewProps>`
+const ContentViewWithNotch = styled(SafeAreaView)<ContentViewProps>`
   height: ${theme.sizes.fullHeight};
-  width: ${({  fullWidth }) =>
+  width: ${({fullWidth}) =>
     fullWidth ? theme.sizes.fullWidth : theme.sizes.contentWidth};
-  align-self: ${({ horizontalAlign }) => horizontalAlign || 'center'};
-  justify-content: ${({ verticalAlign }) => verticalAlign || 'flex-start'};
+  align-self: ${({horizontalAlign}) => horizontalAlign || 'center'};
+  justify-content: ${({verticalAlign}) => verticalAlign || 'flex-start'};
 `;
 
-const ContentViewWithoutNotch = styled(View) <ContentViewProps>`
-height: ${ '100%'};
-width: ${({fullWidth }) =>
+const ContentViewWithoutNotch = styled(View)<ContentViewProps>`
+  height: ${'100%'};
+  width: ${({fullWidth}) =>
     fullWidth ? theme.sizes.fullWidth : theme.sizes.contentWidth};
-align-self: ${({ horizontalAlign }) => horizontalAlign || 'center'};
-justify-content: ${({ verticalAlign }) => verticalAlign || 'flex-start'};
-padding-bottom: ${MarginSize.mediumPadding}px;
-padding-top: ${MarginSize.mediumPadding}px;
+  align-self: ${({horizontalAlign}) => horizontalAlign || 'center'};
+  justify-content: ${({verticalAlign}) => verticalAlign || 'flex-start'};
+  padding-bottom: ${MarginSize.mediumPadding}px;
+  padding-top: ${MarginSize.mediumPadding}px;
 `;
 
-export const ContentView: React.FunctionComponent<ContentViewProps> = props => HAS_NOTCH ?
-  <ContentViewWithNotch {...props}>
-    {props.children}
-  </ContentViewWithNotch> :
-  <ContentViewWithoutNotch {...props}>
-    {props.children}
-  </ContentViewWithoutNotch>;
+export const ContentView: React.FunctionComponent<ContentViewProps> = props =>
+  HAS_NOTCH ? (
+    <ContentViewWithNotch {...props}>{props.children}</ContentViewWithNotch>
+  ) : (
+    <ContentViewWithoutNotch {...props}>
+      {props.children}
+    </ContentViewWithoutNotch>
+  );

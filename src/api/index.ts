@@ -1,7 +1,7 @@
-import createWeather from './services/weather';
+import createTransactions from './services/transactions';
 
-const weatherApi = {
-  weatherServices: createWeather(),
+const transactionsApi = {
+  transactionServices: createTransactions(),
 };
 
-export default weatherApi;
+export default transactionsApi;

@@ -1,10 +1,10 @@
-import LocalizedStrings from "react-native-localization";
+import LocalizedStrings from 'react-native-localization';
 
-export const  strings = new LocalizedStrings({
-    es:{home:{
-        infoTitle: 'Bienvenido a Weather App',
-        infoSubtitle: 'Tiempo actual',
-        infoExtended: 'Tiempo extendido'
-    }}
-})
-
+export const strings = new LocalizedStrings({
+  es: {
+    home: {
+      infoTitle: 'Hola usuario!',
+      infoSubtitle: 'Puedes enviar BTC a cualquier billetera.',
+    },
+  },
+});

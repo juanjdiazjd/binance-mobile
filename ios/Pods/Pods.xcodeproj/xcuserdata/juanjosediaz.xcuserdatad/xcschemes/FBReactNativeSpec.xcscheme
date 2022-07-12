@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C3496D0495E700CF08A90C41EA8FA4BB"
-               BuildableName = "libFBReactNativeSpec.a"
+               BuildableName = "FBReactNativeSpec"
                BlueprintName = "FBReactNativeSpec"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

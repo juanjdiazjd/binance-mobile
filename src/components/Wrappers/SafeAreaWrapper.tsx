@@ -3,28 +3,29 @@ import {
   View,
   ViewProps,
   Keyboard,
-  TouchableWithoutFeedback} from 'react-native';
+  TouchableWithoutFeedback,
+} from 'react-native';
 import React from 'react';
-import { IS_IOS } from '../../config/constants';
-import styled, {  } from 'styled-components';
+import styled from 'styled-components';
 
 import theme from '../../theme';
+import {IS_IOS} from '../../utils/constants';
 
 interface WrapperViewProps extends ViewProps {
-  keyboardAvoidingView?: boolean;}
+  keyboardAvoidingView?: boolean;
+}
 
 const StyledlViewWrapper = styled(View)`
   height: ${theme.sizes.fullHeight};
-  width: ${ theme.sizes.fullWidth};
-  background-color: ${ theme.colors.background } ;
+  width: ${theme.sizes.fullWidth};
+  background-color: ${theme.colors.background};
 `;
 
 const StyledlKeyboardAvoidingViewWrapper = styled(KeyboardAvoidingView)`
   height: ${theme.sizes.fullHeight};
-  width: ${ theme.sizes.fullWidth};
-  background-color: ${ theme.colors.background } ;
+  width: ${theme.sizes.fullWidth};
+  background-color: ${theme.colors.background};
 `;
-
 
 const WrapperView: React.FunctionComponent<WrapperViewProps> = ({
   keyboardAvoidingView = false,
@@ -35,8 +36,7 @@ const WrapperView: React.FunctionComponent<WrapperViewProps> = ({
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <StyledlKeyboardAvoidingViewWrapper
         behavior={IS_IOS ? 'padding' : 'height'}
-        style={style}
-      >
+        style={style}>
         {children}
       </StyledlKeyboardAvoidingViewWrapper>
     </TouchableWithoutFeedback>
@@ -45,4 +45,4 @@ const WrapperView: React.FunctionComponent<WrapperViewProps> = ({
   );
 };
 
-export { WrapperView };
+export {WrapperView};
