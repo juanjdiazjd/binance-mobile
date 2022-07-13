@@ -20,7 +20,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-ios/.xcode.env.local
+
 
 # Android/IntelliJ
 #
@@ -29,7 +29,12 @@ build/
 .gradle
 local.properties
 *.iml
-*.hprof
+.envstore.yml
+gradle.deps
+
+# Visual Studio Code
+#
+.vscode/
 
 # node.js
 #
@@ -42,7 +47,6 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
-
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -50,14 +54,56 @@ buck-out/
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/
 
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots
-**/fastlane/test_output
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
 
 # Bundle artifact
 *.jsbundle
 
-# Ruby / CocoaPods
+# CocoaPods
+ios/Pods/
+ios/Pods/*
 /ios/Pods/
 /vendor/bundle/
+
+# Jest
+coverage
+junit.xml
+
+docs/_book
+
+styleguide/styleguide
+
+# Editors
+stale_outputs_checked
+
+#env
+.env
+.env-dev
+.env-stg
+.env-prod
+.env-local
+
+#release notes
+release-notes.txt
+
+# i18n
+src/core/clients/i18next/locales.json
+
+# DexGuard
+android/libs/DexGuard*/cordova/
+android/libs/DexGuard*/docs/
+android/libs/DexGuard*/samples/
+android/libs/DexGuard*/studio/
+
+#sentry properties
+android/sentry.properties
+ios/sentry.properties
+
+#eslint cache
+.eslintcache
+
+# Bitrise
+.bitrise.secrets.yml
+.artifacts/
