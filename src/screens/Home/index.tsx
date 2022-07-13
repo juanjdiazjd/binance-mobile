@@ -23,7 +23,6 @@ import {TextCustom} from '../../components/ListItem/ListItem';
 import {useState} from 'react';
 import {Modal, Portal, Text, Button, Provider} from 'react-native-paper';
 import {Wallet} from '../../components/Wallet';
-import axios from 'axios';
 
 const {balanceServices: balanceAPI, ripioServices: ratesAPI} = apiServices;
 
