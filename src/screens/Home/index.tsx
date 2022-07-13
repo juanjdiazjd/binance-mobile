@@ -23,6 +23,7 @@ import {TextCustom} from '../../components/ListItem/ListItem';
 import {useState} from 'react';
 import {Modal, Portal, Text, Button, Provider} from 'react-native-paper';
 import {Wallet} from '../../components/Wallet';
+import axios from 'axios';
 
 const {balanceServices: balanceAPI, ripioServices: ratesAPI} = apiServices;
 
@@ -41,8 +42,7 @@ export const ContainerBalance = styled(View)`
 `;
 const ContainerCurrencyInput = styled(View)`
   align-items: center;
-  height: 40px;
-  padding: 5px;
+
   border-radius: 5px;
   background-color: ${theme.colors.background};
 `;
@@ -65,6 +65,7 @@ const HomeScreen = ({}: NativeStackScreenProps<RootStackParamList, 'Home'>) => {
     'getBalance',
     balanceAPI.getBalance,
   );
+
   const myBalance = balance?.Balance.balance ?? 0;
   const {data: rates} = useSWR('getRates', ratesAPI.getRates);
   const [{mountWithFee, availableBalance}] = useMountWithFee(

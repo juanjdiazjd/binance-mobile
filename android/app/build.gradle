@@ -1,5 +1,5 @@
 apply plugin: "com.android.application"
-
+apply from: project(":react-native-config").projectDir.getPath() + "/dotenv.gradle"
 import com.android.build.OutputFile
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 /**
@@ -257,12 +257,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
+    implementation project(':react-native-config')
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-
+    
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }
