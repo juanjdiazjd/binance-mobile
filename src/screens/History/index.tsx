@@ -16,7 +16,7 @@ import {RootStackParamList} from '../../utils/constants';
 import {Header} from '../../components/UI/Header';
 import {strings} from './strings';
 import {Transaction} from '../../types/Home/transaction';
-import ListItem from '../../components/UI/ListItem/ListItem';
+import ListItem from '../../components/ListItem/ListItem';
 import CustomActivityIndicator from '../../components/CustomActivityIndicator';
 import transactionsApi from '../../api';
 import {useCallback} from 'react';
@@ -24,9 +24,9 @@ import useSWR from 'swr';
 
 const {transactionServices: transactionAPI} = transactionsApi;
 
-const Logo = styled(Image)`
-  width: 80px;
-  height: 60px;
+export const Logo = styled(Image)`
+  width: 100px;
+  height: 80px;
 `;
 
 const TextNotFound = styled(Text)`
@@ -73,7 +73,9 @@ const HistoryScreen = ({
 
         {data?.Transactions && (
           <FlatList
-            data={data?.Transactions}
+            data={data?.Transactions.sort(
+              (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf(),
+            )}
             renderItem={renderItem}
             keyExtractor={item => item.id}
             refreshControl={

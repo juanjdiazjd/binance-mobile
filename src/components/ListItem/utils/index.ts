@@ -1,5 +1,5 @@
-import theme from '../../../../theme';
-import {Status} from '../../../../types/Home/transaction';
+import theme from '../../../theme';
+import {Status} from '../../../types/Home/transaction';
 const dayjs = require('dayjs');
 
 export const colorByStatus = (status?: Status): string => {
@@ -13,6 +13,6 @@ export const colorByStatus = (status?: Status): string => {
 
 export const parseDate = (date: string, complete: boolean): string => {
   return complete
-    ? dayjs(date).format('DD/MM/YYYY mm:hh:ss')
+    ? dayjs(date).format('DD/MM/YYYY hh:mm:ss')
     : dayjs(date).format('DD/MM/YYYY');
 };

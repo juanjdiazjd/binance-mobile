@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Image, ScrollView, StatusBar, Text, View} from 'react-native';
+import {ScrollView, StatusBar, Text, View} from 'react-native';
 import {WrapperView} from '../../components/Wrappers/SafeAreaWrapper';
 import {ContentView} from '../../components/Wrappers/ContentView';
 import {TextType} from '../../components/Text/TextView';
@@ -9,15 +9,11 @@ import {RootStackParamList} from '../../utils/constants';
 import {Header} from '../../components/UI/Header';
 import {strings} from './strings';
 import {Status} from '../../types/Home/transaction';
-import {colorByStatus, parseDate} from '../../components/UI/ListItem/utils';
-import {Row} from '../../components/UI/ListItem/ListItem';
+import {colorByStatus, parseDate} from '../../components/ListItem/utils';
+import {Row} from '../../components/ListItem/ListItem';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import theme from '../../theme';
-
-const Logo = styled(Image)`
-  width: 80px;
-  height: 60px;
-`;
+import {Logo} from '../History';
 
 const Container = styled(View)`
   background-color: ${theme.colors.white};

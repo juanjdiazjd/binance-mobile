@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should listi tem component 1`] = `
+<View
+  className="sc-gsnTZi fluHiX"
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      className="sc-gKXOVf biUkuu"
+    >
+      <View
+        className="sc-jSMfEi fsKpmn"
+      >
+        <Text
+          allowFontScaling={false}
+          selectable={false}
+          style={
+            Array [
+              Object {
+                "color": "#FFB400",
+                "fontSize": 40,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          󰠓
+        </Text>
+        <Text
+          allowFontScaling={false}
+          className="sc-iBkjds jfEoOc"
+          selectable={false}
+          status="completed"
+          style={
+            Array [
+              Object {
+                "color": "#27ae60",
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontFamily": "Material Design Icons",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          󰗠
+        </Text>
+      </View>
+      <View
+        className="sc-jSMfEi fsKpmn"
+      >
+        <Text
+          className="sc-hKMtZM hYUqiH"
+        >
+          Envío
+        </Text>
+        <Text
+          className="sc-eCYdqJ lkOUjh"
+        >
+          11/07/2022
+        </Text>
+      </View>
+    </View>
+    <Text
+      className="sc-dkzDqf izhazh"
+    >
+      $ 
+      0.0002
+    </Text>
+  </View>
+</View>
+`;

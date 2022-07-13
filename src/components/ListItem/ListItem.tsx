@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Text, TouchableOpacity, View, ViewProps} from 'react-native';
 import styled from 'styled-components';
-import theme from '../../../theme';
-import {Status, Transaction} from '../../../types/Home/transaction';
+import theme from '../../theme';
+import {Status, Transaction} from '../../types/Home/transaction';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colorByStatus, parseDate} from './utils';
 
@@ -30,7 +30,10 @@ export const TextMount = styled(Text)`
   font-size: 16px;
 `;
 
-export const TextCustom = styled(Text)`
+export const TextCustom = styled(Text)<{
+  color?: string;
+}>`
+  color: ${({color}) => color ?? theme.colors.titleText};
   top: 10%;
   padding-left: 20px;
   font-size: 14px;

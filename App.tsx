@@ -9,6 +9,7 @@ import HomeScreen from './src/screens/Home';
 import TransactionDetailScreen from './src/screens/TransactionDetail';
 import theme from './src/theme';
 import {icons} from './src/utils/constants';
+import Toast from 'react-native-toast-message';
 
 const HistoryStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -30,27 +31,30 @@ const HistoryStackScreen = () => {
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={({route}) => ({
-          tabBarLabel: ({focused}) => (
-            <TabBarLabel focused={focused}>{route.name}</TabBarLabel>
-          ),
-          tabBarIcon: ({focused, size}) => {
-            return (
-              <Icon
-                name={icons[route.name]}
-                color={focused ? theme.colors.primary : theme.colors.gray}
-                size={size}
-              />
-            );
-          },
-          headerShown: false,
-        })}>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="History" component={HistoryStackScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <>
+      <NavigationContainer>
+        <Tab.Navigator
+          screenOptions={({route}) => ({
+            tabBarLabel: ({focused}) => (
+              <TabBarLabel focused={focused}>{route.name}</TabBarLabel>
+            ),
+            tabBarIcon: ({focused, size}) => {
+              return (
+                <Icon
+                  name={icons[route.name]}
+                  color={focused ? theme.colors.primary : theme.colors.gray}
+                  size={size}
+                />
+              );
+            },
+            headerShown: false,
+          })}>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="History" component={HistoryStackScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+      <Toast />
+    </>
   );
 };
 
