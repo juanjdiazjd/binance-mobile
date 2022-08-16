@@ -116,9 +116,6 @@ npm run ios
 for android:
 npm run android
 
-Note: for failed transaction send 0.00000001 satoshis
-
-
 <!-- TEST EXAMPLES -->
 ## Tests
 
