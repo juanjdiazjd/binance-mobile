@@ -89,7 +89,6 @@ const OrderScreen = ({
   }, []);
 
   const handleSetValue = useCallback((orderOptions: OrderOptions) => {
-    console.log(orderOptions);
     setOrder(orderOptions);
   }, []);
 
