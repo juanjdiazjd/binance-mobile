@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should list feature item component 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    className="sc-gsnTZi dnvkNT"
+  >
+    <View
+      className="sc-dkzDqf jIYPSQ"
+      color="#F2BC07"
+    />
+    <View
+      backgroundColor="#F0B10F"
+      className="sc-eCYdqJ cNakAB"
+    >
+      <Image
+        className="sc-jSMfEi kIrGFD"
+        source={
+          Object {
+            "uri": "https://i.imgur.com/a6qfBLb.png",
+          }
+        }
+      />
+    </View>
+    <Text
+      className="sc-hKMtZM iSrUnU"
+      color="#FFFFFF"
+    >
+      Exchange
+    </Text>
+    <Text
+      allowFontScaling={false}
+      className="sc-gKXOVf WzVOL"
+      selectable={false}
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 30,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;

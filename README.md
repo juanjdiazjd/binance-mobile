@@ -11,10 +11,10 @@
 <br />
 <div align="center">
 
-  <img src="https://i.imgur.com/6qkL2Cs.png" alt="Ripioapp" width="80" height="80">
+  <img src="https://play-lh.googleusercontent.com/T1_WHAGs5WZePQejNSqqrxZah4uhBvYr698nTCFhXMjMZo5oSCoko5yW2wtmeO1ClRU" alt="BinanceMobile" width="80" height="80">
   </a>
 
-  <h3 align="center">Ripio Challenge App - React Native - Typescript - SWR</h3>
+  <h3 align="center">Binance Challenge App - React Native - Typescript - SWR</h3>
    [X] Probado en iOS - [X] Probado en Android
 </div>
 
@@ -32,12 +32,18 @@
   <li>Styled Components</li>
   <li>React Native Vector Icons</li>
    <li>React-native-config</li>
-    <li>React-native-paper</li>
      <li>Apisauce</li>
       <li>SWR</li>
+      <li> React-native-config</li>
+<li>react-native-animatable</li>
+<li>react-native-localization</li>
+<li>react-native-svg</li>
     </ul>
 
-  
+  <h3>Features</h3>
+<p>* Network caching</p>
+<p>* ESLint fixes</p>
+<p>* Typescript fixes</p>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -85,19 +91,17 @@ _Below is an example of how you can instruct your audience on installing and set
 
 1. Clone the repo
    ```
-   git clone https://github.com/juanjdiazjd/ripio-mobile.git
+   git clone https://github.com/juanjdiazjd/binance-mobile.git
    ```
 2. Install NPM packages
    ```
    npm install 
    cd ios && pod install
    ```
-3. Enter URL RIPIO, FEE and TRANSACTIONS API Services in `.env` file 
+3. Enter URL BINANCE API Services in `.env` file 
 
    ```
-   URL_API_TRANSACTIONS=https://we1021z5ci.execute-api.us-east-1.amazonaws.com/
-   API_RIPIO_RATES=https://ripio.com/api/
-   API_BTC_FEES=https://bitcoinfees.earn.com/api/
+   URL_API_BINANCE=https://api.binance.com/api/
    ```
    
 <p align="right">(<a href="#top">back to top</a>)</p>

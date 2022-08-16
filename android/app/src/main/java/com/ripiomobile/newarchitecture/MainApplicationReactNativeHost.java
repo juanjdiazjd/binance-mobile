@@ -1,4 +1,4 @@
-package com.ripiomobile.newarchitecture;
+package com.binancemobile.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.ripiomobile.BuildConfig;
-import com.ripiomobile.newarchitecture.components.MainComponentsRegistry;
-import com.ripiomobile.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.binancemobile.BuildConfig;
+import com.binancemobile.newarchitecture.components.MainComponentsRegistry;
+import com.binancemobile.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

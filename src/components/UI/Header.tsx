@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {TouchableOpacity, View, ViewProps} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {ButtonIcon} from 'components/Buttons';
+import {renderLogo} from 'screens/Home/utils';
 import styled from 'styled-components';
-import theme from '../../theme';
-import {MarginSize} from '../../types/sizes';
-import {TextType, TextView} from '../Text/TextView';
+import {Text, View, ViewProps} from 'react-native';
+
+import theme from '../../core/theme';
 
 const SeparatorView = styled(View)`
   width: 20px;
@@ -15,62 +15,82 @@ const ContainerView = styled(View)`
   flex-direction: column;
   padding: 8px;
   margin-bottom: 10px;
-  margin-left: ${MarginSize.smallPadding}px;
+`;
+
+const ContainerLogo = styled(View)<{justifyContent: string}>`
+  flex-direction: row;
+  justify-content: ${({justifyContent}) => justifyContent};
+`;
+
+const TextTitle = styled(Text)`
+  font-size: 20px;
+  color: ${theme.colors.white};
+`;
+
+const TextSubtitle = styled(Text)`
+  font-size: 18px;
+  color: ${theme.colors.white};
+`;
+
+const Column = styled(View)`
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  weight: 40px;
+`;
+
+const SeparatorLine = styled(View)`
+  border-bottom-color: ${theme.colors.primary};
+  border-bottom-width: 1px;
 `;
 
 interface HeaderViewProps extends ViewProps {
   title: string;
   subtitle: string;
   withMenuButton?: boolean;
-  buttonBack: boolean;
+  buttonBack?: boolean;
   onPressButtonBack?: () => void;
-  textTypeTitle?: TextType;
-  textTypeSubtitle?: TextType;
-  bottom?: number;
-  goScreen?: string;
-  exit?: boolean;
+  secondaryButton?: () => JSX.Element;
   secondaryComponent?: () => JSX.Element;
-  functionAdditionalGoScreen?: () => void;
-  customButtonBack?: () => void;
+  isVisibleLogo?: boolean;
+  disabledButtonBack?: boolean;
 }
 
 export const Header: React.FunctionComponent<HeaderViewProps> = ({
   title,
   subtitle,
-  textTypeTitle,
-  textTypeSubtitle,
   secondaryComponent,
   buttonBack,
+  secondaryButton,
   onPressButtonBack,
+  isVisibleLogo = true,
+  disabledButtonBack,
 }) => {
   return (
     <ContainerView>
-      {buttonBack && (
-        <TouchableOpacity onPress={onPressButtonBack && onPressButtonBack}>
-          <Icon name="arrow-back" size={30} color={theme.colors.primary} />
-        </TouchableOpacity>
-      )}
-      <SeparatorView />
+      <ContainerLogo
+        justifyContent={secondaryButton ? 'space-between' : 'flex-start'}>
+        {buttonBack && (
+          <ButtonIcon
+            onHandlePress={onPressButtonBack}
+            iconName="arrow-back"
+            size={30}
+            color={theme.colors.white}
+            disabled={disabledButtonBack}
+          />
+        )}
+        {isVisibleLogo && renderLogo()}
+        {secondaryButton && secondaryButton()}
+      </ContainerLogo>
       {secondaryComponent && secondaryComponent()}
       <SeparatorView />
-      <View>
-        <TextView
-          id={'id_title'}
-          text={title}
-          type={textTypeTitle ? textTypeTitle : TextType.big}
-          textAlign={'left'}
-          colorText={theme.colors.titleText}
-        />
-      </View>
-      <View>
-        <TextView
-          id={'id_subtitle'}
-          text={subtitle}
-          type={textTypeSubtitle ? textTypeSubtitle : TextType.medium}
-          textAlign={'left'}
-          colorText={theme.colors.titleText}
-        />
-      </View>
+      <Column>
+        <TextTitle>{title}</TextTitle>
+        <SeparatorView />
+        <SeparatorLine />
+        <SeparatorView />
+        <TextSubtitle>{subtitle}</TextSubtitle>
+      </Column>
     </ContainerView>
   );
 };

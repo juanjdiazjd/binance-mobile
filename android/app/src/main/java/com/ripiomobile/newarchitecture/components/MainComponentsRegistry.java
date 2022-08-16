@@ -1,4 +1,4 @@
-package com.ripiomobile.newarchitecture.components;
+package com.binancemobile.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

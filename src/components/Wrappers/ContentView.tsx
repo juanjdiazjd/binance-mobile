@@ -3,9 +3,8 @@ import {View, ViewProps} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import styled from 'styled-components';
 
-import theme from '../../theme';
-import {MarginSize} from '../../types/sizes';
 import DeviceInfo from 'react-native-device-info';
+import theme from '../../core/theme';
 
 const HAS_NOTCH = DeviceInfo.hasNotch();
 
@@ -29,8 +28,8 @@ const ContentViewWithoutNotch = styled(View)<ContentViewProps>`
     fullWidth ? theme.sizes.fullWidth : theme.sizes.contentWidth};
   align-self: ${({horizontalAlign}) => horizontalAlign || 'center'};
   justify-content: ${({verticalAlign}) => verticalAlign || 'flex-start'};
-  padding-bottom: ${MarginSize.mediumPadding}px;
-  padding-top: ${MarginSize.mediumPadding}px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 `;
 
 export const ContentView: React.FunctionComponent<ContentViewProps> = props =>

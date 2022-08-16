@@ -1,60 +1,46 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {RootStack} from '@core';
 import React from 'react';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {TabBarLabel} from './src/helpers/generalStyledComponents';
-import HistoryScreen from './src/screens/History';
-import HomeScreen from './src/screens/Home';
-import TransactionDetailScreen from './src/screens/TransactionDetail';
-import theme from './src/theme';
-import {icons} from './src/utils/constants';
+import {AppState, AppStateStatus} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 import Toast from 'react-native-toast-message';
-
-const HistoryStack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
-
-const HistoryStackScreen = () => {
-  return (
-    <HistoryStack.Navigator
-      screenOptions={({}) => ({
-        headerShown: false,
-      })}>
-      <HistoryStack.Screen name="HistoryStack" component={HistoryScreen} />
-      <HistoryStack.Screen
-        name="TransactionDetail"
-        component={TransactionDetailScreen}
-      />
-    </HistoryStack.Navigator>
-  );
-};
+import 'react-native-reanimated';
+import {SWRConfig} from 'swr';
 
 const App = () => {
+  SplashScreen.hide();
+
   return (
-    <>
-      <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={({route}) => ({
-            tabBarLabel: ({focused}) => (
-              <TabBarLabel focused={focused}>{route.name}</TabBarLabel>
-            ),
-            tabBarIcon: ({focused, size}) => {
-              return (
-                <Icon
-                  name={icons[route.name]}
-                  color={focused ? theme.colors.primary : theme.colors.gray}
-                  size={size}
-                />
-              );
-            },
-            headerShown: false,
-          })}>
-          <Tab.Screen name="Home" component={HomeScreen} />
-          <Tab.Screen name="History" component={HistoryStackScreen} />
-        </Tab.Navigator>
-      </NavigationContainer>
+    <SWRConfig
+      value={{
+        provider: () => new Map(),
+        isVisible: () => {
+          return true;
+        },
+        initFocus(callback) {
+          let appState = AppState.currentState;
+          const onAppStateChange = (nextAppState: AppStateStatus) => {
+            if (
+              appState.match(/inactive|background/) &&
+              nextAppState === 'active'
+            ) {
+              callback();
+            }
+            appState = nextAppState;
+          };
+
+          const subscription = AppState.addEventListener(
+            'change',
+            onAppStateChange,
+          );
+
+          return () => {
+            subscription.remove();
+          };
+        },
+      }}>
+      {RootStack()}
       <Toast />
-    </>
+    </SWRConfig>
   );
 };
 
