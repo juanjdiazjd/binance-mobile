@@ -12,11 +12,12 @@ import {CurrencyType, TransactionType, OrderType, OrderStatus} from 'types';
 import {useCallback, useContext, useState} from 'react';
 import {Dropdown} from 'react-native-element-dropdown';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {getPrice, renderClose} from './utils';
+import {calculateFee, getPrice, renderClose} from './utils';
 import CurrencyInput from 'react-native-currency-input';
 import Toast from 'react-native-toast-message';
-import {ContextType, OrderContext} from 'core/context';
+import {OrderContextType, OrderContext} from 'core/context/Orders';
 import uuid from 'react-native-uuid';
+import {FeeContext, FeeContextType} from 'core/context/Fees';
 
 const DEFAULT_LOGO_CRYPTO_SIZE = 80;
 const USD_STABLE_COIN = 'BUSD';
@@ -82,7 +83,8 @@ const OrderScreen = ({
   const [order, setOrder] = useState<OrderOptions>();
   const [isFocus, setIsFocus] = useState(false);
 
-  const {saveOrder} = useContext(OrderContext) as ContextType;
+  const {saveOrder} = useContext(OrderContext) as OrderContextType;
+  const {saveFee} = useContext(FeeContext) as FeeContextType;
 
   const onChangeValue = useCallback((inputText: number) => {
     setNumber(inputText);
@@ -93,6 +95,14 @@ const OrderScreen = ({
   }, []);
 
   const handleExecOnPress = useCallback(() => {
+    if (order?.label === OrderType.Market) {
+      saveFee(
+        calculateFee(
+          parseFloat(getPrice(option, number, parseFloat(item.price))),
+        ),
+      );
+    }
+
     saveOrder({
       id: uuid.v4().toString(),
       date: new Date().toString(),
@@ -106,7 +116,10 @@ const OrderScreen = ({
           ? OrderStatus.Close
           : OrderStatus.Open,
     });
-    navigation.goBack();
+
+    order?.label === OrderType.Limit
+      ? navigation.navigate('OrderBook')
+      : navigation.goBack();
     Toast.show({
       type: 'success',
       text1: `${strings.order.orderSuccess}${
@@ -124,6 +137,7 @@ const OrderScreen = ({
     number,
     option,
     saveOrder,
+    saveFee,
   ]);
 
   const renderLogo = logoByName[item.displayName];

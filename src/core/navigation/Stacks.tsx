@@ -1,7 +1,8 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {OrderProvider} from 'core/context';
+import {FeeProvider} from 'core/context/Fees';
+import {OrderProvider} from 'core/context/Orders';
 import theme from 'core/theme';
 import {TabList} from 'core/utils';
 import React from 'react';
@@ -45,14 +46,16 @@ const TabStack = () => (
 export const RootStack = () => (
   <GestureHandlerRootViewFlex>
     <OrderProvider>
-      <NavigationContainer>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name="TabScreen" component={TabStack} />
-          <Stack.Group screenOptions={{presentation: 'modal'}}>
-            <Stack.Screen name="Order" component={OrderScreen} />
-          </Stack.Group>
-        </Stack.Navigator>
-      </NavigationContainer>
+      <FeeProvider>
+        <NavigationContainer>
+          <Stack.Navigator screenOptions={{headerShown: false}}>
+            <Stack.Screen name="TabScreen" component={TabStack} />
+            <Stack.Group screenOptions={{presentation: 'modal'}}>
+              <Stack.Screen name="Order" component={OrderScreen} />
+            </Stack.Group>
+          </Stack.Navigator>
+        </NavigationContainer>
+      </FeeProvider>
     </OrderProvider>
   </GestureHandlerRootViewFlex>
 );

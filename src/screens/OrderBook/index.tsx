@@ -1,18 +1,25 @@
 import * as React from 'react';
-import {FlatList, ListRenderItem, StatusBar} from 'react-native';
+import {FlatList, ListRenderItem, StatusBar, Text} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {ContentView, Header, WrapperView} from '@components';
 import {strings} from './strings';
 import {RootStackParamList} from 'types/Navigation';
-import {useContext} from 'react';
-import {ContextType, OrderContext} from 'core/context';
 import {OrderItem, OrderStatus} from 'types';
 import ListOrderItem from 'components/List/ListOrderItem/ListOrderItem';
+import theme, {styled} from 'core/theme';
+import {useGetOpenOrders} from 'core/hooks/use-get-open-orders';
+import ShowFee from 'components/Fee/ShowFee';
+
+const TextNotFound = styled(Text)`
+  color: ${theme.colors.white};
+  align-self: center;
+  font-size: 16px;
+`;
 
 const OrderBookScreen = ({
   navigation,
 }: NativeStackScreenProps<RootStackParamList, 'OrderBook'>) => {
-  const {orders} = useContext(OrderContext) as ContextType;
+  const {openOrders} = useGetOpenOrders();
 
   const renderItem: ListRenderItem<OrderItem> = ({item}) => (
     <ListOrderItem item={item} />
@@ -27,10 +34,11 @@ const OrderBookScreen = ({
           subtitle={strings.orderBook.infoSubtitle}
           buttonBack={true}
           onPressButtonBack={() => navigation.goBack()}
+          secondaryComponent={() => <ShowFee />}
         />
-        {orders && (
+        {openOrders && openOrders?.length > 0 ? (
           <FlatList
-            data={orders
+            data={openOrders
               .filter(
                 order =>
                   order.id !== '0' && order.orderStatus === OrderStatus.Open,
@@ -42,6 +50,8 @@ const OrderBookScreen = ({
             renderItem={renderItem}
             keyExtractor={item => item.id}
           />
+        ) : (
+          <TextNotFound>{strings.orderBook.notFound}</TextNotFound>
         )}
       </ContentView>
     </WrapperView>

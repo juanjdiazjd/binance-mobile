@@ -19,6 +19,7 @@ import {useCallback, useMemo, useRef, useState} from 'react';
 import styled from 'styled-components';
 import {renderContainerBottomSheet} from './utils';
 import {TransactionType} from 'types';
+import ShowFee from 'components/Fee/ShowFee';
 
 const INDEX_PER_DEFAULT = -1;
 
@@ -79,6 +80,7 @@ const ExchangeScreen = ({
           buttonBack={true}
           onPressButtonBack={() => navigation.goBack()}
           disabledButtonBack={disabled}
+          secondaryComponent={() => <ShowFee />}
         />
         {items.length > 0 && (
           <FlatList

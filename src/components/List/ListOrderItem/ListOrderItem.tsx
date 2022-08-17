@@ -10,13 +10,16 @@ import styled from 'styled-components';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {CryptoCurrencies, OrderItem, TransactionType} from 'types';
 import theme from 'core/theme';
-import {colorByTransactionType, parseDate} from './utils';
+import {codeByCurrencyName, colorByTransactionType, parseDate} from './utils';
 import {logoByName} from 'screens/Exchange/utils';
 import CountDown from 'react-native-countdown-component';
 import {useCallback, useContext} from 'react';
-import {ContextType, OrderContext} from 'core/context';
+import {OrderContextType, OrderContext} from 'core/context/Orders';
+import {FeeContext, FeeContextType} from 'core/context/Fees';
+import {calculateFee} from 'screens/Order/utils';
 
 const DEFAULT_LOGO_CRYPTO_SIZE = 50;
+const DEFAULT_STABLE_COIN = 'BUSD';
 
 const ListContainer = styled(TouchableOpacity)`
   background-color: ${theme.colors.charcoalGray};
@@ -46,25 +49,31 @@ export const TextCustom = styled(Text)<{
   color?: string;
 }>`
   color: ${({color}) => color ?? theme.colors.white};
-  top: 10%;
   padding-left: 20px;
   font-size: 20px;
 `;
 
 export const TextDate = styled(Text)`
-  top: 15%;
   color: ${theme.colors.titleTextSecondary};
   padding-left: 20px;
   font-size: 18px;
 `;
 
-export const Column = styled(View)`
+const Column = styled(View)`
   flex-direction: column;
 `;
 
-export const Row = styled(View)`
+const Row = styled(View)`
   flex-direction: row;
 `;
+const ContainerCountDown = styled(View)`
+  justify-content: flex-end;
+`;
+const CountDownView = styled(CountDown)`
+  padding: 8px;
+  align-self: flex-end;
+`;
+
 const CustomIcon = styled(Icon)<{
   transactionType: TransactionType;
 }>`
@@ -85,14 +94,16 @@ interface ListOrderItemViewProps extends ViewProps {
 export const ListOrderItem: React.FunctionComponent<ListOrderItemViewProps> = ({
   item,
 }) => {
-  const {closeOrder} = useContext(OrderContext) as ContextType;
+  const {saveFee} = useContext(FeeContext) as FeeContextType;
+  const {closeOrder} = useContext(OrderContext) as OrderContextType;
   const renderLogo = logoByName[item.currency ?? CryptoCurrencies.Bitcoin];
 
   const handleOnFinish = useCallback(
     (id: string) => {
+      saveFee(calculateFee(parseFloat(item.amount)));
       closeOrder(id);
     },
-    [closeOrder],
+    [closeOrder, saveFee, item.amount],
   );
   return (
     <ComponentContainer>
@@ -116,17 +127,26 @@ export const ListOrderItem: React.FunctionComponent<ListOrderItemViewProps> = ({
           </Column>
         </Row>
         <Column>
-          <CountDown
-            until={item.timeRemaining}
-            style={styles.countDown}
-            digitStyle={styles.digitStyle}
-            digitTxtStyle={{color: theme.colors.charcoalGray}}
-            timeLabelStyle={styles.labelStyle}
-            onFinish={() => handleOnFinish(item.id)}
-            timeToShow={['S']}
-            size={20}
-          />
-          <TextMount>$ {item.amount}</TextMount>
+          <ContainerCountDown>
+            <CountDownView
+              until={item.timeRemaining}
+              digitStyle={styles.digitStyle}
+              digitTxtStyle={{color: theme.colors.charcoalGray}}
+              timeLabelStyle={styles.labelStyle}
+              onFinish={() => handleOnFinish(item.id)}
+              timeToShow={['S']}
+              size={20}
+            />
+            <TextMount>{` ${item.amount} ${
+              item.transactionType === TransactionType.Sell
+                ? DEFAULT_STABLE_COIN
+                : ''
+            }${
+              item.transactionType === TransactionType.Buy
+                ? codeByCurrencyName[item?.currency ?? 'Bitcoin']
+                : ''
+            }`}</TextMount>
+          </ContainerCountDown>
         </Column>
       </ListContainer>
     </ComponentContainer>
@@ -134,7 +154,6 @@ export const ListOrderItem: React.FunctionComponent<ListOrderItemViewProps> = ({
 };
 
 const styles = StyleSheet.create({
-  countDown: {padding: 8},
   digitStyle: {
     backgroundColor: theme.colors.secondary,
     height: 30,

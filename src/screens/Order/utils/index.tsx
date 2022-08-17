@@ -7,6 +7,8 @@ import theme from 'core/theme';
 import React from 'react';
 import {TransactionType} from 'types';
 
+const FEE = 1.5;
+
 export const renderClose = (onHandlePress: () => void) => (
   <ButtonIcon
     onHandlePress={onHandlePress}
@@ -24,3 +26,6 @@ export const getPrice = (
   option === TransactionType.Buy
     ? formatToCrypto(currencyInput / exchangeRate)
     : formatToFiat(exchangeRate * currencyInput);
+
+export const calculateFee = (price: number) =>
+  parseFloat((price * FEE).toFixed(2));

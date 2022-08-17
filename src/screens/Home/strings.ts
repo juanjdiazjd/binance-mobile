@@ -8,6 +8,7 @@ export const strings = new LocalizedStrings({
       homeTitle: 'Inicio',
       exchange: 'Mercado',
       orderBook: 'Órdenes',
+      accumulateFee: 'Comisión acumulada:',
     },
   },
   en: {
@@ -17,6 +18,7 @@ export const strings = new LocalizedStrings({
       homeTitle: 'Home',
       exchange: 'Exchange',
       orderBook: 'Orders',
+      accumulateFee: 'Acumullated fee:',
     },
   },
 });

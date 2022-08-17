@@ -5,6 +5,7 @@ export const strings = new LocalizedStrings({
     orderBook: {
       infoTitle: 'Órdenes',
       infoSubtitle: 'Listado de órdenes abiertas:',
+      notFound: 'No hay ninguna orden abierta...',
     },
   },
 
@@ -12,6 +13,7 @@ export const strings = new LocalizedStrings({
     orderBook: {
       infoTitle: 'Orders',
       infoSubtitle: 'List of open orders:',
+      notFound: 'No open orders found',
     },
   },
 });

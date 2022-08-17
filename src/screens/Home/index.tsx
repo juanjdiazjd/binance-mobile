@@ -6,6 +6,7 @@ import {strings} from './strings';
 import {HomeFeatures} from './utils';
 import {Feature} from 'types/ListItem';
 import {RootStackParamList} from 'types/Navigation';
+import ShowFee from 'components/Fee/ShowFee';
 
 const HomeScreen = ({
   navigation,
@@ -24,6 +25,7 @@ const HomeScreen = ({
         <Header
           title={strings.home.infoTitle}
           subtitle={strings.home.infoSubtitle}
+          secondaryComponent={() => <ShowFee />}
         />
         {HomeFeatures.length > 0 && (
           <FlatList

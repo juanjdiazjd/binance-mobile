@@ -11,7 +11,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export type ContextType = {
+export type OrderContextType = {
   orders: OrderItem[];
   saveOrder: (orderItem: OrderItem) => void;
   closeOrder: (id: string) => void;
@@ -29,7 +29,7 @@ const DEFAULT_VALUE: OrderItem[] = [
     orderStatus: OrderStatus.Close,
   },
 ];
-export const OrderContext = React.createContext<ContextType | null>(null);
+export const OrderContext = React.createContext<OrderContextType | null>(null);
 
 export const OrderProvider = ({children}: Props) => {
   const [orders, setOrders] = React.useState<OrderItem[]>(DEFAULT_VALUE);
