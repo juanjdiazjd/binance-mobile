@@ -1,10 +1,13 @@
-import {KeyboardAvoidingView, View, ViewProps, Platform} from 'react-native';
+import {
+  View,
+  ViewProps,
+  Keyboard,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../core/theme';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-
-const IS_IOS = Platform.OS === 'ios';
 
 interface WrapperViewProps extends ViewProps {
   keyboardAvoidingView?: boolean;
@@ -16,7 +19,7 @@ const StyledlViewWrapper = styled(View)`
   background-color: ${theme.colors.background};
 `;
 
-const StyledlKeyboardAvoidingViewWrapper = styled(KeyboardAvoidingView)`
+const StyledlKeyboardAvoidingViewWrapper = styled(KeyboardAwareScrollView)`
   height: ${theme.sizes.fullHeight};
   width: ${theme.sizes.fullWidth};
   background-color: ${theme.colors.background};
@@ -28,13 +31,11 @@ const WrapperView: React.FunctionComponent<WrapperViewProps> = ({
   children,
 }) => {
   return keyboardAvoidingView ? (
-    <KeyboardAwareScrollView>
-      <StyledlKeyboardAvoidingViewWrapper
-        behavior={IS_IOS ? 'padding' : 'height'}
-        style={style}>
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      <StyledlKeyboardAvoidingViewWrapper style={style}>
         {children}
       </StyledlKeyboardAvoidingViewWrapper>
-    </KeyboardAwareScrollView>
+    </TouchableWithoutFeedback>
   ) : (
     <StyledlViewWrapper style={style}>{children}</StyledlViewWrapper>
   );
